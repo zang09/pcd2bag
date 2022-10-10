@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="project" default="pcd2bag"/>
+    
+    <!-- Parameters -->
+    <rosparam file="$(find pcd2bag)/config/settings.yaml" command="load" /> 
+  
+    <!-- Package -->
+    <node pkg="$(arg project)" type="$(arg project)" name="$(arg project)" respawn="false" output="screen" />
+    
+    <!--- Run Rviz-->
+    <node pkg="rviz" type="rviz" name="$(arg project)_rviz" args="-d $(find pcd2bag)/launch/lidar_cloud.rviz" />
+
+</launch>

@@ -1,0 +1,5 @@
+pcd2bag:
+  pointcloud_topic: "os_cloud_node/points"
+  dataset_path: "/home/haebeom/Downloads/LiDAR_dataset/indoor/Lab/pcd/"
+  save_path: "/home/haebeom/Downloads/LiDAR_dataset/indoor/Lab/rosbag/"
+  file_name: "Lab"
